@@ -4,7 +4,9 @@ import Button from './components/Button'
 
 const App = (props)=>(
   <div>
-  <Button />
+  <Button
+  onClick = {()=>alert()}
+  />
   </div>
 )
 

@@ -8,10 +8,12 @@ const style = {
 
 const Button = (props)=>(
   <div>
-   <RaisedButton 
-   label="Primary" 
-   primary={true} 
-   style={style} />
+   <RaisedButton
+   label="Primary"
+   primary={true}
+   style={style}
+   onClick={props.onClick}
+   />
   </div>
 )
 
