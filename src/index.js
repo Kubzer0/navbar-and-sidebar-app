@@ -12,7 +12,7 @@ import App from './App'
 
 ReactDOM.render(
     <MuiThemeProvider>
-    <App />
+        <App />
     </MuiThemeProvider>,
     document.getElementById('root')
 )
