@@ -7,7 +7,9 @@ import Navigation from './Navigation/Navigation';
 
 const App = (props) => (
   <div>
-  <Navigation />
+  <Navigation 
+  
+  />
  
   <Paper>
     <Counter

@@ -2,16 +2,37 @@ import React from 'react'
 
 import AppBar from 'material-ui/AppBar'
 
-function handleClick() {
-    alert('onClick triggered on the title component');
-  }
-  
+import Drawer from 'material-ui/Drawer';
 
-const Navigation = (props) => (
-    <AppBar
-        onLeftIconButtonClick = {handleClick}
-        title="JFDDL6"
-    />
-)
+
+
+class Navigation extends React.Component {
+
+    state = {
+        isDrawerOpen: false
+    }
+
+    toggleDrawer = () => this.setState({ isDrawerOpen: !this.state.isDrawerOpen })
+
+    render() {
+
+        return (
+
+            <div>
+                <AppBar
+                    onLeftIconButtonClick={this.toggleDrawer}
+                    title="JFDDL6"
+                />
+                <Drawer
+                    docked={false}
+                    width={200}
+                    open={this.state.isDrawerOpen}
+                    onRequestChange={this.toggleDrawer}
+                >
+                </Drawer>
+            </div>
+        )
+    }
+}
 
 export default Navigation
