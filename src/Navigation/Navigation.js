@@ -21,7 +21,7 @@ class Navigation extends React.Component {
             <div>
                 <AppBar
                     onLeftIconButtonClick={this.toggleDrawer}
-                    title="JFDDL6"
+                    title={this.props.title || "tekst"}
                 />
                 <Drawer
                     docked={false}

@@ -6,7 +6,7 @@ import Button from './components/Button'
 class Counter extends React.Component {
 
     state = {
-        number: this.props.startNumber
+        number: this.props.startNumber || 0
     }
 
 
