@@ -1,18 +1,29 @@
 import React from 'react'
-
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import MenuItem from 'material-ui/MenuItem'
 
 import Counter from './Counter'
 
-import Navigation from './Navigation/Navigation';
+import Navigation from './Navigation/Navigation'
 
 
 const App = (props) => (
   <Router>
     <div>
       <Navigation>
-        <Link to="/">Dashboard</Link>
-        <Link to="/counter">Counter</Link>
+
+        <Link to="/">
+          <MenuItem>
+            Dashboard
+          </MenuItem>
+        </Link>
+
+        <Link to="/counter">
+          <MenuItem>
+            Counter
+          </MenuItem>
+        </Link>
+
       </Navigation>
 
       <div>
