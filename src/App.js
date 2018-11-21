@@ -8,16 +8,23 @@ import Navigation from './Navigation/Navigation';
 
 
 const App = (props) => (
-  <div>
-    <Router>
+  <Router>
+    <div>
+      <Navigation>
+        <Link to="/">Dashboard</Link>
+        <Link to="/counter">Counter</Link>
+      </Navigation>
+
       <div>
-        <Route path="/" component={Navigation} />
-        <Route path="/counter" exact={true} component={()=> <Counter startNumber = {5}/>} />
+
+        <Route path="/counter" exact={true} component={() => <Counter startNumber={5} />} />
+
       </div>
-    </Router>
 
 
-  </div>
+
+    </div>
+  </Router>
 )
 
 export default App
