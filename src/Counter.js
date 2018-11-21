@@ -26,7 +26,7 @@ class Counter extends React.Component {
     }
 
     resetHandler = () => {
-        this.setState({ number: this.props.startNumber })
+        this.setState({ number: this.props.startNumber || 0 })
     }
 
     render() {
